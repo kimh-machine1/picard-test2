@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    parallelism: 2
+    docker:
+      - image: kimh/picard-trusty:5740
+
+    working_directory: /tmp/code
+    steps:
+      - checkout
+      - run: echo hello
+      - run: echo -e "clj-yaml.core-test\nclj-yaml.dummy-test" | circleci tests split
+
+
+
