@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - run: echo hello
-      - run: echo -e "clj-yaml.core-test\nclj-yaml.dummy-test" | circleci tests split
+      - run: sleep 600
 
 
 
